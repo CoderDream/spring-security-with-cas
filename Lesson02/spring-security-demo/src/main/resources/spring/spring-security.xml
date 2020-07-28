@@ -43,10 +43,43 @@
     <!--授权认证管理器-->
     <authentication-manager>
         <authentication-provider>
-            <user-service>
+            <!-- 引用加密对象 -->
+            <password-encoder ref="encoder" />
+
+            <!--硬编码方式创建用户并授权-->
+            <!--<user-service>
                 <user name="itcast" authorities="ROLE_ADMIN" password="123456" disabled="false" />
-            </user-service>
+            </user-service>-->
+
+
+            <!--
+                数据源
+                select * from users where username=? and password=?
+ and password=?
+                select * from users where username=?
+                密码==用户输入的密码   登录成功
+                密码!=用户输入的密码   登录失败
+            -->
+            <jdbc-user-service data-source-ref="dataSource" users-by-username-query="select * from users where username=?"
+            />
+
         </authentication-provider>
     </authentication-manager>
+
+    <!-- 加密工具 -->
+    <beans:bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+        <beans:constructor-arg name="strength" value="9" />
+    </beans:bean>
+
+    <!-- 数据库连接池 -->
+    <beans:bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+                destroy-method="close">
+        <beans:property name="url" value="jdbc:mysql://localhost:3306/springsecurity?characterEncoding=utf8" />
+        <beans:property name="username" value="root" />
+        <beans:property name="password" value="123456" />
+        <beans:property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+        <beans:property name="maxActive" value="10" />
+        <beans:property name="minIdle" value="5" />
+    </beans:bean>
 
 </beans:beans>
