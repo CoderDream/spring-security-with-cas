@@ -32,5 +32,8 @@
         <td>王五</td>
     </tr>
 </table>
+<div>
+    <a href="/logout">退出</a>
+</div>
 </body>
 </html>
