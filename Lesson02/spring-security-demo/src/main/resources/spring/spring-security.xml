@@ -25,6 +25,14 @@
         <intercept-url pattern="/admin/**" access="ROLE_ADMIN" />-->
         <!--所有请求都需要ROLE_ADMIN权限-->
         <intercept-url pattern="/**" access="ROLE_ADMIN" />
+
+        <!-- 自定义登录页面配置 -->
+        <form-login login-page="/login.shtml" default-target-url="/admin/user/list.shtml"
+                    authentication-failure-url="/login/fail.shtml" />
+
+        <!-- 关闭CSRF攻击 -->
+        <csrf disabled="true" />
+
     </http>
 
     <!--授权认证管理器-->
