@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans.xsd
+      http://www.springframework.org/schema/security
+      http://www.springframework.org/schema/security/spring-security-4.2.xsd ">
+
+    <!--
+    auto-config =true:默认会配置多个SpringSecurity相关过滤器，如果不配，就不能正常使用SpringSecurity相关功能。
+    use-expressions:是否使用SpELl表达式。
+    ，pattern表示要拦截的路径，可以用通配符表示, * * 表示所有路径。 access表示对应地址访问所需的权限，
+    如果use-expressions=“false”access=“hasRole(‘ROLE_ADMIN’)”这里的hasRole就可以去掉，
+    我们后面都会设置成false，直接去掉这里的hasRole方便一点。ROLE_ADMIN表示ADMIN角色，这列角色自定义，
+     可以随意定义什么角色，不过注意，这里必须得大写。
+    -->
+    <http auto-config="true" use-expressions="true">
+        <!--所有带有admin的请求都需要ROLE_ADMIN权限-->
+        <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
+    </http>
+
+    <!--授权认证管理器-->
+    <authentication-manager>
+    </authentication-manager>
+
+</beans:beans>

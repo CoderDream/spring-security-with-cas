@@ -22,4 +22,7 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
+    <!--引入spring-security.xml-->
+    <import resource="spring-security.xml" />
+
 </beans>
