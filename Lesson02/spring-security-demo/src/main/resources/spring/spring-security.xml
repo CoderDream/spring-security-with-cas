@@ -27,7 +27,9 @@
         <intercept-url pattern="/**" access="ROLE_ADMIN" />
 
         <!-- 自定义登录页面配置 -->
-        <form-login login-page="/login.shtml" default-target-url="/admin/user/list.shtml"
+        <form-login login-page="/login.shtml"
+                    default-target-url="/admin/user/list.shtml"
+                    always-use-default-target="true"
                     authentication-failure-url="/login/fail.shtml" />
 
         <!-- 关闭CSRF攻击 -->
