@@ -30,7 +30,10 @@
         <form-login login-page="/login.shtml"
                     default-target-url="/admin/user/list.shtml"
                     always-use-default-target="true"
-                    authentication-failure-url="/login/fail.shtml" />
+                    authentication-failure-url="/login/fail.shtml"
+                    username-parameter="usernameitcast"
+                    password-parameter="passworditcast"
+        />
 
         <!-- 关闭CSRF攻击 -->
         <csrf disabled="true" />

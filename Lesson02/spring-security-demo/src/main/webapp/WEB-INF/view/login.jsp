@@ -7,11 +7,11 @@
     <table>
         <tr>
             <td>用户名:</td>
-            <td><input type='text' name='username' value=''></td>
+            <td><input type='text' name='usernameitcast' value=''></td>
         </tr>
         <tr>
             <td>密码:</td>
-            <td><input type='password' name='password'/></td>
+            <td><input type='password' name='passworditcast'/></td>
         </tr>
         <tr>
             <td colspan='2'>
