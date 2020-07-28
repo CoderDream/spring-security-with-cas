@@ -6,6 +6,12 @@
       http://www.springframework.org/schema/security
       http://www.springframework.org/schema/security/spring-security-4.2.xsd ">
 
+    <!-- 取消对应请求路径的安全策略 -->
+    <http pattern="/images/**" security="none" />
+    <http pattern="/login.shtml" security="none" />
+    <http pattern="/login/fail.shtml" security="none" />
+    <http pattern="/register.shtml" security="none" />
+
     <!--
     auto-config =true:默认会配置多个SpringSecurity相关过滤器，如果不配，就不能正常使用SpringSecurity相关功能。
     use-expressions:是否使用SpELl表达式。
