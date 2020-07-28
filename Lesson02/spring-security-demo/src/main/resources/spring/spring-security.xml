@@ -14,13 +14,20 @@
     我们后面都会设置成false，直接去掉这里的hasRole方便一点。ROLE_ADMIN表示ADMIN角色，这列角色自定义，
      可以随意定义什么角色，不过注意，这里必须得大写。
     -->
-    <http auto-config="true" use-expressions="true">
-        <!--所有带有admin的请求都需要ROLE_ADMIN权限-->
-        <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
+    <http auto-config="true" use-expressions="false">
+        <!--所有带有admin的请求都需要ROLE_ADMIN权限
+        <intercept-url pattern="/admin/**" access="ROLE_ADMIN" />-->
+        <!--所有请求都需要ROLE_ADMIN权限-->
+        <intercept-url pattern="/**" access="ROLE_ADMIN" />
     </http>
 
     <!--授权认证管理器-->
     <authentication-manager>
+        <authentication-provider>
+            <user-service>
+                <user name="itcast" authorities="ROLE_ADMIN" password="123456" disabled="false" />
+            </user-service>
+        </authentication-provider>
     </authentication-manager>
 
 </beans:beans>
