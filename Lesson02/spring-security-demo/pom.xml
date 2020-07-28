@@ -17,9 +17,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <spring.new.version>[4.3.18,)</spring.new.version>
-        <spring.version>4.3.12.RELEASE</spring.version>
-        <spring.security.version>4.2.4.RELEASE</spring.security.version>
+        <spring.bak.version>[4.3.18,)</spring.bak.version>
+        <spring.bak.security.version>[4.3.18,)</spring.bak.security.version>
+
+        <spring.version>4.3.23.RELEASE</spring.version>
+        <spring.security.version>4.2.12.RELEASE</spring.security.version>
     </properties>
 
 
@@ -95,7 +97,7 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-cas</artifactId>
-            <version>${spring.security.version}</version>
+            <version>4.2.4.RELEASE</version>
         </dependency>
 
         <!-- MySql -->
