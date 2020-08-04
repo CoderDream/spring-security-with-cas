@@ -1,0 +1,74 @@
+body{
+    align-items: center;
+    justify-content: center;
+    /*background-color: #d9e4ff;*/
+    /*background: -webkit-linear-gradient(top,  #fff 0%,#fff 50%,#fff 100%);*/
+    background: -webkit-linear-gradient(top, #88ceff 0%,#ffffff 25%,#ffffff 75%,#99dcff 100%);
+    background: -moz-linear-gradient(top, #88ceff 0%,#ffffff 25%,#ffffff 75%,#99dcff 100%);
+    background: -o-linear-gradient(top, #88ceff 0%,#ffffff 25%,#ffffff 75%,#99dcff 100%);
+    background: -ms-linear-gradient(top, #88ceff 0%,#ffffff 25%,#ffffff 75%,#99dcff 100%);
+    background: linear-gradient(top, #88ceff 0%,#ffffff 25%,#ffffff 75%,#99dcff 100%);
+}
+.loginpanel{
+    width: 100%;
+    height: 60%;
+    margin-top: -120px;
+    flex-direction: column;
+    display: flex;
+}
+.logofield{
+    height: 100px;
+}
+.loginbox{
+    background-image: url("../images/bg.jpg");
+    background-repeat:no-repeat;
+    background-position:center;
+    /*box-shadow: 0px 0px 6px #3768e1;*/
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*background-origin:content-box;*/
+}
+.loginbox>div{
+    height: 50px;
+    display: flex;
+    align-items:center;
+}
+.loginbox>div.title{
+    margin-top: -80px;
+    height: 80px;
+    font-size: 32px;
+    color: #FFF;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 10px;
+    text-shadow:1px 1px 3px #000;
+}
+.loginbox>div[title]:before{
+    text-align: right;
+    content: attr(title);
+    padding-right: 20px;
+    font-family: "微软雅黑";
+    color: #FFF;
+    letter-spacing: 20px;
+    text-shadow:1px 1px 2px #000;
+}
+.loginbox input{
+    height: 32px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+.loginbox input[type='button'] {
+    margin-left: 20px;
+    background-color: #fff318;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}

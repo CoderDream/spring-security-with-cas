@@ -1,0 +1,56 @@
+.title{
+    background-image: url("../images/bg.jpg");
+    padding: 10px;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 1px 5px #000;
+    height: 48px;
+}
+.title>.titletext{
+    font-size: 22px;
+    color: #FFF;
+    letter-spacing: 6px;
+    margin-left: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px #000;
+    flex: 1;
+}
+.title>.userinfo,.title>.exit{
+    color: #FFF;
+    padding: 0 6px;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+}
+.space{
+    padding: 0px 40px 40px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.space>a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background-color: #FFF;
+    box-shadow: 1px 1px 3px #000;
+    padding: 10px;
+    margin: 20px;
+    height: 140px;
+
+}
+.space>a>img{
+    max-width: 120px;
+    max-height: 120px;
+}
+.exit.icon.icon-exit:before,.userinfo.icon.icon-user:before{
+    margin-right: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
