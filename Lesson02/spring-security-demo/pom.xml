@@ -20,7 +20,7 @@
         <spring.bak.version>[4.3.18,)</spring.bak.version>
         <spring.bak.security.version>[4.3.18,)</spring.bak.security.version>
 
-        <spring.version>4.3.23.RELEASE</spring.version>
+        <spring.version>5.2.22.RELEASE</spring.version>
         <spring.security.version>4.2.12.RELEASE</spring.security.version>
     </properties>
 
